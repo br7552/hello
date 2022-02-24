@@ -21,6 +21,7 @@ resource "digitalocean_app" "hello" {
       instance_size_slug = "basic-xxs"
 
       github {
+		branch = "master"
         repo = "br7552/hello"
       }
     }
