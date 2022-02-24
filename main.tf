@@ -19,6 +19,7 @@ resource "digitalocean_app" "hello" {
     service {
       name               = "hello-service"
       instance_size_slug = "basic-xxs"
+      dockerfile_path    = "/Dockerfile"
 
       git {
         branch         = "master"
