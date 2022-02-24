@@ -20,9 +20,9 @@ resource "digitalocean_app" "hello" {
       name               = "hello-service"
       instance_size_slug = "basic-xxs"
 
-      github {
-		branch = "master"
-        repo = "br7552/hello"
+      git {
+        branch         = "master"
+        repo_clone_url = "https://github.com/br7552/hello"
       }
     }
   }
