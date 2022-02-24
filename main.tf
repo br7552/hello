@@ -17,11 +17,12 @@ resource "digitalocean_app" "hello" {
     region = "nyc1"
 
     service {
+      name               = "hello-service"
       instance_size_slug = "basic-xxs"
-    }
 
-    github {
-      repo = "br7552/hello"
+      github {
+        repo = "br7552/hello"
+      }
     }
   }
 }
